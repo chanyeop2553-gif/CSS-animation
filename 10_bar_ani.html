@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            .bar {
+                width: 5px;
+                height: 480px;
+                background: #fff;
+
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                margin: auto;
+                /* 상하좌운 가운데 위치 */
+
+                animation-name: bar;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+
+            @keyframes bar {
+                0% {
+                    height: 0;
+                    transform: rotate(0);
+                }
+                25% {
+                    height: 400px;
+                    transform: rotate(0);
+                }
+                50% {
+                    height: 400px;
+                    transform: rotate(180deg);
+                }
+                100% {
+                    height: 0;
+                    transform: rotate(180deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar"></div>
+    </body>
+</html>
